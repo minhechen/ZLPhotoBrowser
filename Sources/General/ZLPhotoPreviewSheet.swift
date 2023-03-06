@@ -123,6 +123,7 @@ public class ZLPhotoPreviewSheet: UIView {
     private var panCell: ZLThumbnailPhotoCell?
     
     private weak var sender: UIViewController?
+    private weak var showView: UIView?
     
     private lazy var fetchImageQueue = OperationQueue()
     
@@ -271,12 +272,12 @@ public class ZLPhotoPreviewSheet: UIView {
         return true
     }
     
-    @objc public func showPreview(animate: Bool = true, sender: UIViewController) {
-        show(preview: true, animate: animate, sender: sender)
+    @objc public func showPreview(animate: Bool = true, sender: UIViewController, showView: UIView? = nil) {
+        show(preview: true, animate: animate, sender: sender, showView: showView)
     }
     
-    @objc public func showPhotoLibrary(sender: UIViewController) {
-        show(preview: false, animate: false, sender: sender)
+    @objc public func showPhotoLibrary(sender: UIViewController, showView: UIView? = nil) {
+        show(preview: false, animate: false, sender: sender, showView: showView)
     }
     
     /// 传入已选择的assets，并预览
@@ -304,7 +305,11 @@ public class ZLPhotoPreviewSheet: UIView {
         self.sender = sender
         isSelectOriginal = isOriginal
         isHidden = true
-        sender.view.addSubview(self)
+        if let view = self.showView {
+            view.addSubview(self)
+        } else {
+            sender.view.addSubview(self)
+        }
         
         let vc = ZLPhotoPreviewController(photos: models, index: index, showBottomViewAndSelectBtn: showBottomViewAndSelectBtn)
         vc.autoSelectCurrentIfNotSelectAnyone = false
@@ -318,10 +323,11 @@ public class ZLPhotoPreviewSheet: UIView {
         sender.showDetailViewController(nav, sender: nil)
     }
     
-    private func show(preview: Bool, animate: Bool, sender: UIViewController) {
+    private func show(preview: Bool, animate: Bool, sender: UIViewController, showView: UIView? = nil) {
         self.preview = preview
         self.animate = animate
         self.sender = sender
+        self.showView = showView
         
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .restricted || status == .denied {
@@ -341,14 +347,21 @@ public class ZLPhotoPreviewSheet: UIView {
                     }
                 }
             }
-            
-            sender.view.addSubview(self)
+            if let view = self.showView {
+                view.addSubview(self)
+            } else {
+                sender.view.addSubview(self)
+            }
         } else {
             if preview {
                 loadPhotos()
                 show()
             } else {
-                sender.view.addSubview(self)
+                if let view = self.showView {
+                    view.addSubview(self)
+                } else {
+                    sender.view.addSubview(self)
+                }
                 photoLibraryBtnClick()
             }
         }
@@ -373,12 +386,21 @@ public class ZLPhotoPreviewSheet: UIView {
     }
     
     private func show() {
-        frame = sender?.view.bounds ?? .zero
+        if let view = self.showView {
+            frame = view.bounds
+        } else {
+            frame = sender?.view.bounds ?? .zero
+        }
         
         collectionView.contentOffset = .zero
         
         if superview == nil {
-            sender?.view.addSubview(self)
+
+            if let view = self.showView {
+                view.addSubview(self)
+            } else {
+                sender?.view.addSubview(self)
+            }
         }
         
         if let tabBar = sender?.tabBarController?.tabBar, !tabBar.isHidden {
