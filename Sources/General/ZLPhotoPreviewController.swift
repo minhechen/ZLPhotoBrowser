@@ -149,7 +149,7 @@ public class ZLPhotoPreviewController: UIViewController {
     var autoSelectCurrentIfNotSelectAnyone = true
     
     /// 界面消失时，通知上个界面刷新（针对预览视图）
-    var backBlock: (() -> Void)?
+    public var backBlock: (() -> Void)?
     
     public override var prefersStatusBarHidden: Bool {
         return !ZLPhotoUIConfiguration.default().showStatusBarInPreviewInterface

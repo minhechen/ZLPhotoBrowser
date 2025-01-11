@@ -1509,7 +1509,7 @@ class ZLExternalAlbumListNavView: UIView {
         return btn
     }()
     
-    var backBlock: (() -> Void)?
+    public var backBlock: (() -> Void)?
     
     var cancelBlock: (() -> Void)?
     

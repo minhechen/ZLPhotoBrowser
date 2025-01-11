@@ -33,9 +33,9 @@ public class ZLImageNavController: UINavigationController {
     
     var arrSelectedModels: [ZLPhotoModel] = []
     
-    var selectImageBlock: (() -> Void)?
-    
-    var cancelBlock: (() -> Void)?
+    public var selectImageBlock: (() -> Void)?
+
+    public var cancelBlock: (() -> Void)?
     
     deinit {
         zl_debugPrint("ZLImageNavController deinit")
