@@ -42,7 +42,7 @@ enum ZLLayout {
     static let bottomToolBtnCornerRadius: CGFloat = 5
 }
 
-func markSelected(source: inout [ZLPhotoModel], selected: inout [ZLPhotoModel]) {
+public func markSelected(source: inout [ZLPhotoModel], selected: inout [ZLPhotoModel]) {
     guard selected.count > 0 else {
         return
     }

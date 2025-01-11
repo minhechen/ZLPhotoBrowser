@@ -116,42 +116,42 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 相册列表界面底部工具栏按钮 可交互 状态标题颜色
-    static var bottomToolViewBtnNormalTitleColor: UIColor {
+    public static var bottomToolViewBtnNormalTitleColor: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnNormalTitleColor
     }
     
     /// 相册列表界面底部工具栏 `完成` 按钮 可交互 状态标题颜色
-    static var bottomToolViewDoneBtnNormalTitleColor: UIColor {
+    public static var bottomToolViewDoneBtnNormalTitleColor: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewDoneBtnNormalTitleColor
     }
     
     /// 预览大图界面底部工具栏按钮 可交互 状态标题颜色
-    static var bottomToolViewBtnNormalTitleColorOfPreviewVC: UIColor {
+    public static var bottomToolViewBtnNormalTitleColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnNormalTitleColorOfPreviewVC
     }
     
     /// 预览大图界面底部工具栏 `完成` 按钮 可交互 状态标题颜色
-    static var bottomToolViewDoneBtnNormalTitleColorOfPreviewVC: UIColor {
+    public static var bottomToolViewDoneBtnNormalTitleColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewDoneBtnNormalTitleColorOfPreviewVC
     }
     
     /// 相册列表界面底部工具栏按钮 不可交互 状态标题颜色
-    static var bottomToolViewBtnDisableTitleColor: UIColor {
+    public static var bottomToolViewBtnDisableTitleColor: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnDisableTitleColor
     }
     
     /// 相册列表界面底部工具栏 `完成` 按钮 不可交互 状态标题颜色
-    static var bottomToolViewDoneBtnDisableTitleColor: UIColor {
+    public static var bottomToolViewDoneBtnDisableTitleColor: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewDoneBtnDisableTitleColor
     }
     
     /// 预览大图界面底部工具栏按钮 不可交互 状态标题颜色
-    static var bottomToolViewBtnDisableTitleColorOfPreviewVC: UIColor {
+    public static var bottomToolViewBtnDisableTitleColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnDisableTitleColorOfPreviewVC
     }
     
     /// 预览大图界面底部工具栏 `完成` 按钮 不可交互 状态标题颜色
-    static var bottomToolViewDoneBtnDisableTitleColorOfPreviewVC: UIColor {
+    public static var bottomToolViewDoneBtnDisableTitleColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewDoneBtnDisableTitleColorOfPreviewVC
     }
     
@@ -161,32 +161,32 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 预览大图界面底部工具栏按钮 可交互 状态背景颜色
-    static var bottomToolViewBtnNormalBgColorOfPreviewVC: UIColor {
+    public static var bottomToolViewBtnNormalBgColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnNormalBgColorOfPreviewVC
     }
     
     /// 相册列表界面底部工具栏按钮 不可交互 状态背景颜色
-    static var bottomToolViewBtnDisableBgColor: UIColor {
+    public static var bottomToolViewBtnDisableBgColor: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnDisableBgColor
     }
     
     /// 预览大图界面底部工具栏按钮 不可交互 状态背景颜色
-    static var bottomToolViewBtnDisableBgColorOfPreviewVC: UIColor {
+    public static var bottomToolViewBtnDisableBgColorOfPreviewVC: UIColor {
         ZLPhotoUIConfiguration.default().bottomToolViewBtnDisableBgColorOfPreviewVC
     }
     
     /// iOS14 limited 权限时候，小图界面下方显示 选择更多图片 标题颜色
-    static var limitedAuthorityTipsColor: UIColor {
+    public static var limitedAuthorityTipsColor: UIColor {
         return ZLPhotoUIConfiguration.default().limitedAuthorityTipsColor
     }
     
     /// 自定义相机录制视频时，进度条颜色
-    static var cameraRecodeProgressColor: UIColor {
+    public static var cameraRecodeProgressColor: UIColor {
         ZLPhotoUIConfiguration.default().cameraRecodeProgressColor
     }
     
     /// 已选cell遮罩层颜色
-    static var selectedMaskColor: UIColor {
+    public static var selectedMaskColor: UIColor {
         ZLPhotoUIConfiguration.default().selectedMaskColor
     }
     
@@ -206,37 +206,37 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 选中图片右上角index background color
-    static var indexLabelBgColor: UIColor {
+    public static var indexLabelBgColor: UIColor {
         ZLPhotoUIConfiguration.default().indexLabelBgColor
     }
     
     /// 拍照cell 背景颜色
-    static var cameraCellBgColor: UIColor {
+    public static var cameraCellBgColor: UIColor {
         ZLPhotoUIConfiguration.default().cameraCellBgColor
     }
     
     /// 调整图片slider默认色
-    static var adjustSliderNormalColor: UIColor {
+    public static var adjustSliderNormalColor: UIColor {
         ZLPhotoUIConfiguration.default().adjustSliderNormalColor
     }
     
     /// 调整图片slider高亮色
-    static var adjustSliderTintColor: UIColor {
+    public static var adjustSliderTintColor: UIColor {
         ZLPhotoUIConfiguration.default().adjustSliderTintColor
     }
     
     /// 图片编辑器中各种工具下方标题普通状态下的颜色
-    static var imageEditorToolTitleNormalColor: UIColor {
+    public static var imageEditorToolTitleNormalColor: UIColor {
         ZLPhotoUIConfiguration.default().imageEditorToolTitleNormalColor
     }
     
     /// 图片编辑器中各种工具下方标题高亮状态下的颜色
-    static var imageEditorToolTitleTintColor: UIColor {
+    public static var imageEditorToolTitleTintColor: UIColor {
         ZLPhotoUIConfiguration.default().imageEditorToolTitleTintColor
     }
     
     /// 图片编辑器中各种工具图标高亮状态下的颜色
-    static var imageEditorToolIconTintColor: UIColor? {
+    public static var imageEditorToolIconTintColor: UIColor? {
         ZLPhotoUIConfiguration.default().imageEditorToolIconTintColor
     }
     
@@ -246,7 +246,7 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 编辑器中垃圾箱高亮状态下的颜色
-    static var trashCanBackgroundTintColor: UIColor {
+    public static var trashCanBackgroundTintColor: UIColor {
         ZLPhotoUIConfiguration.default().trashCanBackgroundTintColor
     }
 }

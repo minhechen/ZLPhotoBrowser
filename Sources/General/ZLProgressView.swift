@@ -37,7 +37,7 @@ public class ZLProgressView: UIView {
         return layer
     }()
     
-    var progress: CGFloat = 0 {
+    public var progress: CGFloat = 0 {
         didSet {
             self.setNeedsDisplay()
         }

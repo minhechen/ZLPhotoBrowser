@@ -48,7 +48,7 @@ public class ZLAnimationUtils: NSObject {
         return animation
     }
     
-    class func springAnimation() -> CAKeyframeAnimation {
+    public class func springAnimation() -> CAKeyframeAnimation {
         let animate = CAKeyframeAnimation(keyPath: "transform")
         animate.duration = ZLPhotoConfiguration.default().selectBtnAnimationDuration
         animate.isRemovedOnCompletion = true

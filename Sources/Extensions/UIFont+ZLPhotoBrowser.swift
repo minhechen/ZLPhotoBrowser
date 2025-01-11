@@ -27,7 +27,7 @@
 import UIKit
 
 extension ZLPhotoBrowserWrapper where Base: UIFont {
-    static func font(ofSize fontSize: CGFloat) -> UIFont {
+    public static func font(ofSize fontSize: CGFloat) -> UIFont {
         guard let name = ZLCustomFontDeploy.fontName else {
             return UIFont.systemFont(ofSize: fontSize)
         }
