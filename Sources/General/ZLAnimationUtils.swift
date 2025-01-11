@@ -26,7 +26,7 @@
 
 import UIKit
 
-class ZLAnimationUtils: NSObject {
+public class ZLAnimationUtils: NSObject {
     enum AnimationType: String {
         case fade = "opacity"
         case scale = "transform.scale"

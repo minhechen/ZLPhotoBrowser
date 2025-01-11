@@ -191,7 +191,7 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 已选cell border颜色
-    static var selectedBorderColor: UIColor {
+    public static var selectedBorderColor: UIColor {
         ZLPhotoUIConfiguration.default().selectedBorderColor
     }
     
@@ -201,7 +201,7 @@ extension ZLPhotoBrowserWrapper where Base: UIColor {
     }
     
     /// 选中图片右上角index text color
-    static var indexLabelTextColor: UIColor {
+    public static var indexLabelTextColor: UIColor {
         ZLPhotoUIConfiguration.default().indexLabelTextColor
     }
     
