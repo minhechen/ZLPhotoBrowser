@@ -49,7 +49,7 @@ public class ZLImageNavController: UINavigationController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         navigationBar.barStyle = .black
         navigationBar.isTranslucent = true
